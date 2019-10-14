@@ -41,6 +41,8 @@ Campeao Teemo
 Campeao Malphite
 Campeao Garen
 Campeao Amumu
+Campeao Evelyn
+Campeao Jax
 Monstro Galinhas
 Monstro Lobos 
 Monstro Sapo

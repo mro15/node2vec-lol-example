@@ -3,6 +3,7 @@
 import networkx as nx
 from node2vec import Node2Vec
 import argparse
+import matplotlib.pyplot as plt
 
 def read_args():
     parser = argparse.ArgumentParser(description="The parameters are:")
@@ -28,6 +29,8 @@ def get_similarities(nodes, model):
 def main():
     args = read_args()
     lol_graph = build_graph(args.edges_file)
+    nx.draw(lol_graph, with_labels = True)
+    plt.show()
     model = train_model(lol_graph)
     get_similarities(args.nodes, model)
 
