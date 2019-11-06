@@ -26,11 +26,14 @@ def get_similarities(nodes, model):
     for i in nodes:
         print(i, model.wv.most_similar(i))
 
+def draw_graph(lol_graph):
+    nx.draw(lol_graph, with_labels = True)
+    plt.show()
+
 def main():
     args = read_args()
     lol_graph = build_graph(args.edges_file)
-    nx.draw(lol_graph, with_labels = True)
-    plt.show()
+    draw_graph(lol_graph)
     model = train_model(lol_graph)
     get_similarities(args.nodes, model)
 
