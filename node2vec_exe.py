@@ -33,7 +33,7 @@ def draw_graph(lol_graph):
 def main():
     args = read_args()
     lol_graph = build_graph(args.edges_file)
-    draw_graph(lol_graph)
+    #draw_graph(lol_graph)
     model = train_model(lol_graph)
     get_similarities(args.nodes, model)
 
